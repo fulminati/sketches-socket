@@ -6,7 +6,13 @@ const port = 30000
 const requestHandler = (request, response) => {
     console.log(request.url);
     var pid = process.pid;
-    response.end('Hello Node.js Server! pid:', pid)
+    var ts = (new Date()).getTime();
+
+    while (((new Date()).getTime() - ts) < 5000) {
+
+    }
+
+    response.end('Hello Node.js Server!');
 }
 
 const server = http.createServer(requestHandler)
