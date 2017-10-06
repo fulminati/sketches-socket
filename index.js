@@ -14,7 +14,7 @@ server.listen(port, (err) => {
     if (err) {
         return console.log('something bad happened', err)
     }
-
-    fs.writeFileSync("process.pid", process.pid);
-    console.log(process.pid,  `server is listening on ${port}`);
+    var pid = process.pid;
+    fs.writeFileSync("process.pid", pid);
+    console.log(`server is listening on ${port} with pid ${pid}`);
 })
