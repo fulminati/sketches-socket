@@ -1,4 +1,5 @@
 // content of index.js
+const fs = require('fs')
 const http = require('http')
 const port = 30000
 
@@ -14,5 +15,6 @@ server.listen(port, (err) => {
         return console.log('something bad happened', err)
     }
 
+    fs.writeFileSync("process.pid", process.pid);
     console.log(process.pid,  `server is listening on ${port}`);
 })
