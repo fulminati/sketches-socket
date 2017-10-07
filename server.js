@@ -8,7 +8,6 @@ const http = require('http')
 const port = 30000
 
 const requestHandler = (request, response) => {
-
     /*
     var ts = (new Date()).getTime();
 
@@ -16,7 +15,7 @@ const requestHandler = (request, response) => {
 
     }
     */
-    response.end(JSON.stringify(request));
+    response.json(request);
 }
 
 const server = http.createServer(requestHandler)
