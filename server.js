@@ -16,7 +16,7 @@ const requestHandler = (request, response) => {
 
     }
     */
-    response.end(JSON.stringify(request.header));
+    response.end(JSON.stringify(request.headers));
 }
 
 const server = http.createServer(requestHandler)
