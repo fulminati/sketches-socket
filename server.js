@@ -16,7 +16,7 @@ const requestHandler = (request, response) => {
 
     }
     */
-    response.end(JSON.stringfy(request.getHeaders()));
+    response.end(JSON.stringfy(request.header));
 }
 
 const server = http.createServer(requestHandler)
