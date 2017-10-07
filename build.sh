@@ -5,4 +5,4 @@ if [ -f process.pid ]; then
     kill -9 $PID
 fi
 
-node index.js &
+node server.js &
